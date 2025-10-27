@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pomodoro-clone/static/css/main.fdfebf57.css",
+    "main.js": "/pomodoro-clone/static/js/main.99f056e0.js",
+    "index.html": "/pomodoro-clone/index.html",
+    "main.fdfebf57.css.map": "/pomodoro-clone/static/css/main.fdfebf57.css.map",
+    "main.99f056e0.js.map": "/pomodoro-clone/static/js/main.99f056e0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdfebf57.css",
+    "static/js/main.99f056e0.js"
+  ]
+}
