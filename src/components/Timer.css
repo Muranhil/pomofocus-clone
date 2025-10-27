@@ -1,0 +1,85 @@
+/* src/components/Timer.css */
+
+/* Kotak utama Timer */
+.timer-box {
+    background-color: rgba(255, 255, 255, 0.1); /* Sedikit transparansi */
+    padding: 25px;
+    border-radius: 8px;
+    width: 350px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.5s ease; 
+}
+
+/* Navigasi Mode (Pomodoro, Break) */
+.mode-selector {
+    margin-bottom: 20px;
+}
+.mode-selector button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+.mode-selector button.active {
+    background-color: rgba(0, 0, 0, 0.15);
+    opacity: 1;
+}
+
+/* Tampilan Waktu */
+.time-display {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+/* Tombol Kontrol (START/PAUSE/RESET) */
+.control-btn, .reset-btn {
+    font-size: 24px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: transform 0.1s, color 0.3s;
+}
+/* Efek saat tombol ditekan */
+.control-btn:active, .reset-btn:active {
+    transform: scale(0.98);
+}
+
+/* Warna tombol START/PAUSE (control-btn) berdasarkan Mode */
+
+.control-btn {
+    color: #ba4949; /* Warna default: Merah Pomodoro */
+    background-color: white;
+}
+
+/* Short Break Mode: Menggunakan warna Teal */
+.timer-box.shortBreak .control-btn {
+    color: #4c9195; 
+}
+
+/* Long Break Mode: Menggunakan warna Biru Navy */
+.timer-box.longBreak .control-btn {
+    color: #457ca3; 
+}
+
+/* Styling Tombol Reset */
+.reset-btn {
+    background: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px 20px;
+    margin-left: 15px;
+}
+.reset-btn:hover {
+    color: white;
+}

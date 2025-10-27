@@ -1,0 +1,131 @@
+/* src/App.css */
+
+/* --- HEADER & SETTINGS BUTTON --- */
+header {
+    /* Mengatur tata letak header: memisahkan judul (h1) dan tombol setting */
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 480px; 
+    margin: 0 auto 30px; 
+    padding: 0 15px;
+}
+
+/* Gaya untuk tombol Setting di header */
+.settings-btn {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.settings-btn:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --- GLOBAL BODY STYLES --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    
+    /* Warna latar belakang default (Pomodoro) */
+    background-color: #ba4949; 
+    transition: background-color 0.5s ease; 
+}
+
+/* --- APP CONTAINER --- */
+.App {
+    text-align: center;
+    padding-top: 50px;
+    width: 100%;
+}
+.app-main {
+    padding-bottom: 32px;
+}
+h1 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- TEMA WARNA GLOBAL --- */
+body.pomodoro {
+    background-color: #ba4949; /* Merah */
+}
+body.shortBreak {
+    background-color: #4c9195; /* Teal/Biru-Hijau Muda */
+}
+body.longBreak {
+    background-color: #457ca3; /* Biru Tua/Navy */
+}
+
+/* --- TASK LIST STYLING --- */
+.tasks-container {
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+.tasks-header h2 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Gaya untuk tombol 'Add Task' dan TaskForm yang belum diexpand */
+.add-task-btn, .task-form {
+    border: 2px dashed rgba(255, 255, 255, 0.4);
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 15px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Gaya untuk setiap item tugas (Task.js) */
+.task-item {
+    background-color: white;
+    color: black;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* --- TOMBOL HAPUS (Task.js) --- */
+.task-delete-btn {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0; /* Sembunyikan secara default */
+    transition: opacity 0.2s;
+    line-height: 1; 
+    padding: 0;
+}
+
+/* Tampilkan tombol Hapus saat kursor di atas item */
+.task-item:hover .task-delete-btn {
+    opacity: 1; 
+}
+
+.task-delete-btn:hover {
+    color: #333; 
+}
